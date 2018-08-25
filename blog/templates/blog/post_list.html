@@ -6,16 +6,13 @@
 
 <body>
     <h1>Welcome Eta's blog</h1>
+    {%for post in posts%}
     <div>
-        <h3>Post1</h3>
-        <p>Published date</p>
-        <p>BLog content</p>
+        <h3>{{post.title}}</h3>
+        <p>{{post.published_date}}</p>
+        <p>{{post.text|linebreaksbr}}</p>
     </div>
-    <div>
-        <h3>Post1</h3>
-        <p>Published date</p>
-        <p>BLog content</p>
-    </div>
+    {%endfor%}
 </body>
 
 </html>
